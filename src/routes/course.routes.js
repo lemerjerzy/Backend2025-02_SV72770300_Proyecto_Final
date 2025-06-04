@@ -18,7 +18,7 @@ courseRoutes.post("/", [
     check("name", "Name es requerido").not().isEmpty(),
     check("value", "Value es requerido").not().isEmpty(),
 ], validateFields, validateAuthJwt, isModerator, createCourse);
-courseRoutes.put("/:courseId", isModerator, validateAuthJwt, updateCourse);
+courseRoutes.put("/:courseId", validateAuthJwt, isModerator, updateCourse);
 courseRoutes.delete("/:courseId", validateAuthJwt, isAdmin, deleteCourse);
 
 export default courseRoutes;
