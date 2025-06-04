@@ -1,7 +1,9 @@
 import Coupon from "../models/coupon.model.js";
 
 const getAllCoupons = (req, res) => {
-    Coupon.find()
+    Coupon.find({
+        active: true
+    })
         .then(coupons => {
             res.status(200).json({
                 message: "Cupones obtenidos con éxito",
