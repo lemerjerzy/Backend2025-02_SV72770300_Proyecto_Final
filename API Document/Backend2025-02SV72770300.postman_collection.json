@@ -1,0 +1,868 @@
+{
+	"info": {
+		"_postman_id": "cc8020cc-d2ef-4d66-abb6-22aa34e24cfd",
+		"name": "Backend2025-02SV72770300",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43267533"
+	},
+	"item": [
+		{
+			"name": "Session",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"jerzypa.19@gmail.com\",\r\n    \"password\": \"emerson012345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://backend2025-02-sv72770300-proyecto-final.onrender.com/api/auth/login",
+							"protocol": "https",
+							"host": [
+								"backend2025-02-sv72770300-proyecto-final",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://backend2025-02-sv72770300-proyecto-final.onrender.com/api/auth/logout",
+							"protocol": "https",
+							"host": [
+								"backend2025-02-sv72770300-proyecto-final",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"emersonleon\",\r\n    \"email\": \"jerzypa.19@gmail.com\",\r\n    \"password\": \"emerson012345\",\r\n    \"roles\": [\"admin\", \"moderator\", \"user\"]\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://backend2025-02-sv72770300-proyecto-final.onrender.com/api/auth/signup",
+							"protocol": "http",
+							"host": [
+								"backend2025-02-sv72770300-proyecto-final",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Read All Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://backend2025-02-sv72770300-proyecto-final.onrender.com/api/user",
+							"protocol": "http",
+							"host": [
+								"backend2025-02-sv72770300-proyecto-final",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read Only User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://backend2025-02-sv72770300-proyecto-final.onrender.com/api/user/683dcdd2e5f28411a3aaf069",
+							"protocol": "http",
+							"host": [
+								"backend2025-02-sv72770300-proyecto-final",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"user",
+								"683dcdd2e5f28411a3aaf069"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://backend2025-02-sv72770300-proyecto-final.onrender.com/api/user/683dd29916958d2743a889a2",
+							"protocol": "http",
+							"host": [
+								"backend2025-02-sv72770300-proyecto-final",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"user",
+								"683dd29916958d2743a889a2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"password\": \"kong24680\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://backend2025-02-sv72770300-proyecto-final.onrender.com/api/user/683dd36f754ddc8b2c32a58a",
+							"protocol": "http",
+							"host": [
+								"backend2025-02-sv72770300-proyecto-final",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"user",
+								"683dd36f754ddc8b2c32a58a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"kellysandoval\",\r\n    \"email\": \"sandoval@gmail.com\",\r\n    \"password\": \"sandoval123kelly\",\r\n    \"roles\": [\"admin\", \"moderator\"]\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://backend2025-02-sv72770300-proyecto-final.onrender.com/api/user",
+							"protocol": "http",
+							"host": [
+								"backend2025-02-sv72770300-proyecto-final",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cart",
+			"item": [
+				{
+					"name": "Load Cart",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://backend2025-02-sv72770300-proyecto-final.onrender.com/api/cart",
+							"protocol": "http",
+							"host": [
+								"backend2025-02-sv72770300-proyecto-final",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"cart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Cart",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"course\": \"683dea7c0dd4a0e2e17da34f\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://backend2025-02-sv72770300-proyecto-final.onrender.com/api/cart",
+							"protocol": "http",
+							"host": [
+								"backend2025-02-sv72770300-proyecto-final",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"cart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Item Cart",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://backend2025-02-sv72770300-proyecto-final.onrender.com/api/cart/6840aa5d2c0a23f595cd0e3a",
+							"protocol": "http",
+							"host": [
+								"backend2025-02-sv72770300-proyecto-final",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"cart",
+								"6840aa5d2c0a23f595cd0e3a"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Payment",
+			"item": [
+				{
+					"name": "Make Payment",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"card_number\": \"4111111111111111\",\r\n    \"cvv\": \"123\",\r\n    \"expiration_month\": \"12\",\r\n    \"expiration_year\": \"2025\",\r\n    \"currency_code\": \"PEN\",\r\n    \"code_discount\": \"BIENVENIDO10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://backend2025-02-sv72770300-proyecto-final.onrender.com/api/payment",
+							"protocol": "http",
+							"host": [
+								"backend2025-02-sv72770300-proyecto-final",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"payment"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "Delete Category",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://backend2025-02-sv72770300-proyecto-final.onrender.com/api/category/683ddb927ea7a7af82adbaff",
+							"protocol": "http",
+							"host": [
+								"backend2025-02-sv72770300-proyecto-final",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"category",
+								"683ddb927ea7a7af82adbaff"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Category",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"Explora tu lado artístico aprendiendo a crear interfaces, ilustraciones o piezas audiovisuales.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://backend2025-02-sv72770300-proyecto-final.onrender.com/api/category/683de0ece0aca05c31ad6dfd",
+							"protocol": "http",
+							"host": [
+								"backend2025-02-sv72770300-proyecto-final",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"category",
+								"683de0ece0aca05c31ad6dfd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read All Categories",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://backend2025-02-sv72770300-proyecto-final.onrender.com/api/category",
+							"protocol": "http",
+							"host": [
+								"backend2025-02-sv72770300-proyecto-final",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read Only Category",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://backend2025-02-sv72770300-proyecto-final.onrender.com/api/category/683de0d6e0aca05c31ad6df9",
+							"protocol": "http",
+							"host": [
+								"backend2025-02-sv72770300-proyecto-final",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"category",
+								"683de0d6e0aca05c31ad6df9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Category",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Diseño Gráfico\",\r\n    \"description\": \"Aprende a crear contenido visual atractivo para redes sociales, presentaciones y marcas.\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://backend2025-02-sv72770300-proyecto-final.onrender.com/api/category",
+							"protocol": "http",
+							"host": [
+								"backend2025-02-sv72770300-proyecto-final",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"category"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Purchase",
+			"item": [
+				{
+					"name": "Read All Purchase",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://backend2025-02-sv72770300-proyecto-final.onrender.com/api/purchase",
+							"protocol": "http",
+							"host": [
+								"backend2025-02-sv72770300-proyecto-final",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"purchase"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read Only Purchase",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://backend2025-02-sv72770300-proyecto-final.onrender.com/api/purchase/683f68b690d0c0224efdd4bf",
+							"protocol": "http",
+							"host": [
+								"backend2025-02-sv72770300-proyecto-final",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"purchase",
+								"683f68b690d0c0224efdd4bf"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Course",
+			"item": [
+				{
+					"name": "Create Course",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"name\": \"Inteligencia Emocional\",\r\n    \"description\": \"Desarrolla tu inteligencia emocional para mejorar relaciones personales y laborales.\",\r\n    \"img\": \"https://edupsicologo.com/wp-content/uploads/2019/06/brain-3269655_1920.jpg\",\r\n    \"value\": \"80.99\",\r\n    \"category\": \"683ddb5a7ea7a7af82adbafa\"\r\n\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://backend2025-02-sv72770300-proyecto-final.onrender.com/api/course",
+							"protocol": "http",
+							"host": [
+								"backend2025-02-sv72770300-proyecto-final",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"course"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Course",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"name\": \"Inteligencia Emocional\",\r\n    \"description\": \"Desarrolla tu inteligencia emocional para mejorar relaciones personales y laborales.\",\r\n    \"img\": \"https://edupsicologo.com/wp-content/uploads/2019/06/brain-3269655_1920.jpg\",\r\n    \"value\": \"80.99\",\r\n    \"category\": \"683ddb5a7ea7a7af82adbafa\"\r\n\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://backend2025-02-sv72770300-proyecto-final.onrender.com/api/course/6840acc92c0a23f595cd0e5b",
+							"protocol": "http",
+							"host": [
+								"backend2025-02-sv72770300-proyecto-final",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"course",
+								"6840acc92c0a23f595cd0e5b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read All Course",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://backend2025-02-sv72770300-proyecto-final.onrender.com/api/course",
+							"protocol": "http",
+							"host": [
+								"backend2025-02-sv72770300-proyecto-final",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"course"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read Only Course",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://backend2025-02-sv72770300-proyecto-final.onrender.com/api/course/683dea7c0dd4a0e2e17da34f",
+							"protocol": "http",
+							"host": [
+								"backend2025-02-sv72770300-proyecto-final",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"course",
+								"683dea7c0dd4a0e2e17da34f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Course",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"name\": \"Inteligencia Emocional Avanzado\",\r\n    \"description\": \"Desarrolla tu inteligencia emocional para mejorar relaciones personales y laborales a un nivel más avanzado\",\r\n    \"value\": \"95.99\",\r\n    \"active\": \"true\"\r\n\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://backend2025-02-sv72770300-proyecto-final.onrender.com/api/course/6840acc92c0a23f595cd0e5b",
+							"protocol": "http",
+							"host": [
+								"backend2025-02-sv72770300-proyecto-final",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"course",
+								"6840acc92c0a23f595cd0e5b"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Coupon",
+			"item": [
+				{
+					"name": "Get All Coupons",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://backend2025-02-sv72770300-proyecto-final.onrender.com/api/coupon",
+							"protocol": "http",
+							"host": [
+								"backend2025-02-sv72770300-proyecto-final",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"coupon"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Only Coupon",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://backend2025-02-sv72770300-proyecto-final.onrender.com/api/coupon/683e467487ea0d35f26cf819",
+							"protocol": "http",
+							"host": [
+								"backend2025-02-sv72770300-proyecto-final",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"coupon",
+								"683e467487ea0d35f26cf819"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Coupon",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\": \"SPOTIFY147\",\r\n    \"discount\": 5,\r\n    \"expirationDate\": \"2025-10-25\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://backend2025-02-sv72770300-proyecto-final.onrender.com/api/coupon",
+							"protocol": "http",
+							"host": [
+								"backend2025-02-sv72770300-proyecto-final",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"coupon"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Coupon",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\": \"SPOTIFY_19\",\r\n    \"discount\": 8,\r\n    \"expirationDate\": \"2025-10-26\",\r\n    \"active\": \"true\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://backend2025-02-sv72770300-proyecto-final.onrender.com/api/coupon/6840b1f00cb4b7175e1c7024",
+							"protocol": "http",
+							"host": [
+								"backend2025-02-sv72770300-proyecto-final",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"coupon",
+								"6840b1f00cb4b7175e1c7024"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Coupon",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\": \"SPOTIFY_19\",\r\n    \"discount\": 8,\r\n    \"expirationDate\": \"2025-10-26\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://backend2025-02-sv72770300-proyecto-final.onrender.com/api/coupon/6840b1f00cb4b7175e1c7024",
+							"protocol": "http",
+							"host": [
+								"backend2025-02-sv72770300-proyecto-final",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"coupon",
+								"6840b1f00cb4b7175e1c7024"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
