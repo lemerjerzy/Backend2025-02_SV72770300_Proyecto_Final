@@ -64,7 +64,7 @@ const createCoupon = (req, res) => {
 
 }
 
-const updateCoupon = (res, req) => {
+const updateCoupon = (req, res) => {
     const { couponId } = req.params;
     const updateData = req.body;
 
