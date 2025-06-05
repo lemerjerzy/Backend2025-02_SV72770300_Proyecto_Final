@@ -1,4 +1,5 @@
 import Course from "../models/course.model.js";
+import Category from "../models/category.model.js"
 
 const getAllCourses = (req, res) => {
     Course.find({
@@ -106,10 +107,87 @@ const deleteCourse = (req, res) => {
         });
 }
 
+const filterCourses = (req, res) => {
+    let { query = "", page = 1, limit = 5 } = req.body;
+
+    const regexQuery = new RegExp(query, 'i');
+    const skip = (page - 1) * limit;
+
+    const filter = {
+        $or: [
+            { name: { $regex: regexQuery } },
+            { description: { $regex: regexQuery } }
+        ]
+    };
+
+    Promise.all([
+        Course.find(filter).skip(skip).limit(limit),
+        Course.countDocuments(filter)
+    ])
+    .then(([filteredCourses, total]) => {
+        res.status(200).json({
+            message: "Cursos filtrados correctamente",
+            courses: filteredCourses,
+            pagination: {
+                coursesPerPage: limit,
+                currentPage: Number(page),
+                totalPages: Math.ceil(total / limit),
+                totalCourses: total
+            }
+        });
+    })
+    .catch(error => {
+        res.status(500).json({
+            message: "Error al filtrar cursos",
+            error: error.message
+        });
+    });
+};
+
+const filterCoursesPerCategory = (req, res) => {
+    let { query = "", page = 1, limit = 5 } = req.body;
+
+    const regexQuery = new RegExp(query, 'i');
+    const skip = (page - 1) * limit;
+
+    Category.find({ name: { $regex: regexQuery } }).select('_id')
+        .then(matchCategories => {
+
+            const selectCategoryId = matchCategories.map(category => category._id);
+            
+            const filter = { category: { $in: selectCategoryId } };
+
+            return Promise.all([
+                Course.find(filter).skip(skip).limit(limit),
+                Course.countDocuments(filter)
+            ]);
+        })
+        .then(([filteredCourses, total]) => {
+            res.status(200).json({
+                message: "Cursos filtrados correctamente",
+                courses: filteredCourses,
+                pagination: {
+                    coursesPerPage: limit,
+                    currentPage: Number(page),
+                    totalPages: Math.ceil(total / limit),
+                    totalCourses: total
+                }
+            });
+        })
+        .catch(error => {
+            res.status(500).json({
+                message: "Error al filtrar cursos por categoría",
+                error: error.message
+            });
+        });
+};
+
 export {
     getAllCourses,
     getOnlyCourse,
     createCourse,
     updateCourse,
-    deleteCourse
+    deleteCourse,
+    filterCourses,
+    filterCoursesPerCategory
 }
