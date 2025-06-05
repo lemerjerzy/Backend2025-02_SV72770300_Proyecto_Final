@@ -178,7 +178,7 @@ const filterCoursesPerCategory = (req, res) => {
             }
 
             res.status(200).json({
-                message: "Cursos filtrados correctamente",
+                message: "Cursos filtrados correctamente por categoría",
                 courses: filteredCourses,
                 pagination: {
                     coursesPerPage: limit,
