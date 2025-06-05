@@ -706,6 +706,75 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Filter Courses",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"query\": \"tiempo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://backend2025-02-sv72770300-proyecto-final.onrender.com/api/course/filter",
+							"protocol": "http",
+							"host": [
+								"backend2025-02-sv72770300-proyecto-final",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"course",
+								"filter"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Filter Courses Per Category",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"query\": \"perso\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://backend2025-02-sv72770300-proyecto-final.onrender.com/api/course/filter/category",
+							"protocol": "http",
+							"host": [
+								"backend2025-02-sv72770300-proyecto-final",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"course",
+								"filter",
+								"category"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
