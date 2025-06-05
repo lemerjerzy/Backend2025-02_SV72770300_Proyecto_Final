@@ -125,6 +125,13 @@ const filterCourses = (req, res) => {
         Course.countDocuments(filter)
     ])
     .then(([filteredCourses, total]) => {
+
+        if (!filterCourses) {
+            return res.status(404).json({
+                message: "No se encontraron cursos"
+            })
+        }
+
         res.status(200).json({
             message: "Cursos filtrados correctamente",
             courses: filteredCourses,
@@ -154,7 +161,7 @@ const filterCoursesPerCategory = (req, res) => {
         .then(matchCategories => {
 
             const selectCategoryId = matchCategories.map(category => category._id);
-            
+
             const filter = { category: { $in: selectCategoryId } };
 
             return Promise.all([
@@ -163,6 +170,13 @@ const filterCoursesPerCategory = (req, res) => {
             ]);
         })
         .then(([filteredCourses, total]) => {
+
+            if (!filterCourses) {
+                return res.status(404).json({
+                    message: "No hay cursos en la categoría seleccionada"
+                })
+            }
+
             res.status(200).json({
                 message: "Cursos filtrados correctamente",
                 courses: filteredCourses,
