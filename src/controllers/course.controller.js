@@ -126,7 +126,7 @@ const filterCourses = (req, res) => {
     ])
     .then(([filteredCourses, total]) => {
 
-        if (!filteredCourses) {
+        if (filteredCourses.length == 0) {
             return res.status(404).json({
                 message: "No se encontraron cursos"
             })
@@ -171,9 +171,9 @@ const filterCoursesPerCategory = (req, res) => {
         })
         .then(([filteredCourses, total]) => {
 
-            if (!filteredCourses) {
+            if (filteredCourses.length == 0) {
                 return res.status(404).json({
-                    message: "No hay cursos en la categoría seleccionada"
+                    message: "No hay cursos en la categoría"
                 })
             }
 
